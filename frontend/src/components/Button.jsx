@@ -1,4 +1,4 @@
-function Button({name}) {
+function Button({name, action}) {
     
     const variants = [
         {
@@ -10,7 +10,7 @@ function Button({name}) {
     const variant = variants.find((v) => v.name === name);
 
     return(
-        <button className={variant?.classList}>
+        <button onClick={action} className={variant?.classList}>
             <span>{name}</span>
         </button>
     );
